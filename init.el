@@ -1,5 +1,5 @@
 ;;color theme config
-(add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/lisp")
 (require 'color-theme)
 (color-theme-initialize)
 (color-theme-deep-blue)
