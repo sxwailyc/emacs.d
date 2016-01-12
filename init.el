@@ -6,4 +6,26 @@
 
 
 ;;remove the tool bar
-(tool-bar-mode nil)
+(tool-bar-mode 0)
+(menu-bar-mode 0)
+(scroll-bar-mode 0)
+
+;;markdown
+(autoload 'markdown-mode "markdown-mode"
+   "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+
+;;shell
+(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
+(setq exec-path (append exec-path '("/usr/local/bin")))
+
+
+(defun shell ()
+  (interactive)
+  (ansi-term "/bin/zsh"))
+
+;;python mode
+(setq py-install-directory "~/.emacs.d/site-lisp/python-mode")                                                                                                                                                                                                                (add-to-list 'load-path py-install-directory)                                                                                                                                                                                                                               
+(require 'python-mode)  
