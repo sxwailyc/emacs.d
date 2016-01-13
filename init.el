@@ -29,3 +29,8 @@
 ;;python mode
 (setq py-install-directory "~/.emacs.d/site-lisp/python-mode")                                                                                                                                                                                                                (add-to-list 'load-path py-install-directory)                                                                                                                                                                                                                               
 (require 'python-mode)  
+
+;;web mode
+(setq web-install-directory "~/.emacs.d/site-lisp/web-mode")                                                                                                                                                                                                                  (add-to-list 'load-path web-install-directory)                                                                                                                                                                                                                               
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
