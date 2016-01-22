@@ -1,7 +1,42 @@
 
 #+TITLE:* 我的emacs笔记
 
-| price | number | amount |
-|     2 |    112 |    224 |
-|       |        |        |
-#+TBLFM: $3=$1*$2
+
+* 移动
+** 字符移动
+*** Ctrl + f 
+*** Ctrl + b
+*** Ctrl + p
+*** Ctrl + n 
+
+** 单词移动
+*** M + f
+*** M + b
+*** M + p
+*** M + n
+
+
+/窗口操作/
+
++删除线+
+
+| column1 | column2 |
+|         |         |
+
+** TODO 
+
+
+#+begin_src  java
+
+public class Test{
+
+     public void static void main(String args[]){
+
+
+     }
+
+
+}
+
+
+#+end_src
