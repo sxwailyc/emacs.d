@@ -34,3 +34,9 @@
 (setq web-install-directory "~/.emacs.d/site-lisp/web-mode")                                                                                                                                                                                                                  (add-to-list 'load-path web-install-directory)                                                                                                                                                                                                                               
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
+
+(add-hook 'after-init-hook 'global-company-mode)
+
+
+(require 'init-company-jedi)
+(require 'init-ido)
