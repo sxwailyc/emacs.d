@@ -1,8 +1,25 @@
+
+;;package config
+(require 'package)
+(package-initialize)
+
+
 ;;color theme config
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (require 'color-theme)
 (color-theme-initialize)
 (color-theme-deep-blue)
+
+;; Setting English Font
+(set-face-attribute
+'default nil :font "Courier 14")
+
+;; Chinese Font
+(dolist (charset '(kana han symbol cjk-misc bopomofo))
+(set-fontset-font (frame-parameter nil 'font)
+charset
+(font-spec :family "Microsoft Yahei" :size 16)))
+
 
 
 ;;remove the tool bar
@@ -37,6 +54,17 @@
 
 (add-hook 'after-init-hook 'global-company-mode)
 
+;;line number
+(setq column-number-mode t)
+(setq line-number-mode t)
 
-(require 'init-company-jedi)
+;;display time
+(display-time-mode 1)
+(setq display-time-24hr-format 1)
+
+;;(require 'init-company-jedi)
 (require 'init-ido)
+(require 'init-smex)
+(require 'init-js2-mode)
+(require 'init-git-emacs)
+
