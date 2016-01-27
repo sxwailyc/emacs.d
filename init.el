@@ -44,11 +44,12 @@ charset
   (ansi-term "/bin/zsh"))
 
 ;;python mode
-(setq py-install-directory "~/.emacs.d/site-lisp/python-mode")                                                                                                                                                                                                                (add-to-list 'load-path py-install-directory)                                                                                                                                                                                                                               
+(setq py-install-directory "~/.emacs.d/site-lisp/python-mode")                                                                                                                                                                               (add-to-list 'load-path py-install-directory)                                                                                                                                                                                               
+
 (require 'python-mode)  
 
 ;;web mode
-(setq web-install-directory "~/.emacs.d/site-lisp/web-mode")                                                                                                                                                                                                                  (add-to-list 'load-path web-install-directory)                                                                                                                                                                                                                               
+(setq web-install-directory "~/.emacs.d/site-lisp/web-mode")                                                                                                                                                                                 (add-to-list 'load-path web-install-directory)                                                                                                                                                                                                                               
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
 
@@ -67,4 +68,3 @@ charset
 (require 'init-smex)
 (require 'init-js2-mode)
 (require 'init-git-emacs)
-
